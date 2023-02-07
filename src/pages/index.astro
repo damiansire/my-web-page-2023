@@ -6,6 +6,10 @@ import YugiohCard from "../components/YugiohCard.astro";
 import Notification from "../components/Notification.astro";
 import Redes from "../components/Redes.astro";
 import AboutMe from "../components/AboutMe.astro";
+import GalleryCard from "../components/GalleryCard.astro";
+import RedesNotificationContainer from "../components/RedesNotificationContainer.astro";
+import Stats from "../components/Stats.astro";
+import { generalStats } from "../data/generalStats";
 ---
 
 <Layout title="Damian Sire">
@@ -14,23 +18,36 @@ import AboutMe from "../components/AboutMe.astro";
     class="bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center"
   >
     <div class="w-full">
+      <div class="grid gap-4 xl:grid-cols-6">
+        {
+          generalStats.map(({ iconName, title, text }) => (
+            <Stats iconName={iconName} title={title} text={text} />
+          ))
+        }
+      </div>
       <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
-      <Redes />
-      <div class="container mx-auto py-10 bg-neutral-800/50 flex">
-        <div class="basis-1/4">
-          <YugiohCard />
-        </div>
-        <div class="p-4 text-gray-600 basis-2/3">
-          <AboutMe />
-        </div>
+    </div>
+    <div class="flex flex-col absolute right-0">
+      <br />
+      <RedesNotificationContainer />
+    </div>
+    <div class="container mx-auto py-10 bg-neutral-800/50 flex">
+      <div class="basis-1/4">
+        <YugiohCard />
+      </div>
+      <div class="p-4 text-gray-600 basis-2/3">
+        <AboutMe />
       </div>
     </div>
-    {
-      /*<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-       */
-    }
+    <div class="flex justify-between py-10">
+      <GalleryCard />
+      <GalleryCard />
+      <GalleryCard />
+      <GalleryCard />
+    </div>
   </div>
 </Layout>
+
 <style>
   main {
     margin: auto;
