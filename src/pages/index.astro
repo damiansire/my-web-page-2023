@@ -16,8 +16,14 @@ import AboutMe from "../components/AboutMe.astro";
     <div class="w-full">
       <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
       <Redes />
-      <YugiohCard />
-      <AboutMe />
+      <div class="container mx-auto py-10 bg-neutral-800/50 flex">
+        <div class="basis-1/4">
+          <YugiohCard />
+        </div>
+        <div class="p-4 text-gray-600 basis-2/3">
+          <AboutMe />
+        </div>
+      </div>
     </div>
     {
       /*<h1>Welcome to <span class="text-gradient">Astro</span></h1>
