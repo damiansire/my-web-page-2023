@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar.astro";
 import YugiohCard from "../components/YugiohCard.astro";
 import Notification from "../components/Notification.astro";
 import Redes from "../components/Redes.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout title="Damian Sire">
@@ -15,10 +16,12 @@ import Redes from "../components/Redes.astro";
     <div class="w-full">
       <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
       <Redes />
+      <YugiohCard />
+      <AboutMe />
     </div>
     {
       /*<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <YugiohCard /> */
+       */
     }
   </div>
 </Layout>
