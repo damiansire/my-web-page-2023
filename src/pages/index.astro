@@ -22,6 +22,19 @@ import { generalStats } from "../data/generalStats";
           ))
         }
       </div>
+      <div class="grid grid-cols-4">
+        <div class="flex justify-between py-10 flex-col">
+          <GalleryCard />
+          <GalleryCard />
+        </div>
+        <div class="col-span-2 m-auto py-10 bg-neutral-800/50">
+          <AboutMe />
+        </div>
+        <div class="flex justify-between py-10 flex-col">
+          <GalleryCard />
+          <GalleryCard />
+        </div>
+      </div>
     </div>
     <div class="col-span-3 min-w-[450px]">
       <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
@@ -46,19 +59,9 @@ import { generalStats } from "../data/generalStats";
       </div>
     </div>
 
-    <div class="container m-auto py-10 bg-neutral-800/50 flex">
-      <div class="basis-1/4"></div>
-      <div class="p-4 text-gray-600 basis-2/3">
-        <AboutMe />
-      </div>
-    </div>
+
     
-    <div class="flex justify-between py-10">
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-    </div>
+
 
 */
 }
