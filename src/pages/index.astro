@@ -12,35 +12,53 @@ import { generalStats } from "../data/generalStats";
 <Layout title="Damian Sire">
   <div
     style="background-image: url('https://wallpaperaccess.com/full/295661.jpg');"
-    class="bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center"
+    class="bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center grid grid-cols-11"
   >
-    <div class="w-full">
-      <div class="grid gap-4 xl:grid-cols-6">
+    <div class="col-span-8 gap-4">
+      <div class="flex justify-evenly">
         {
           generalStats.map(({ iconName, title, text }) => (
             <Stats iconName={iconName} title={title} text={text} />
           ))
         }
       </div>
-      <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
     </div>
-    <div class="flex flex-col absolute right-0">
+    <div class="col-span-3 min-w-[450px]">
+      <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
       <br />
       <RedesNotificationContainer />
+      <br />
+      <YugiohCard />
     </div>
-    <div class="container mx-auto py-10 bg-neutral-800/50 flex">
-      <div class="basis-1/4">
-        <YugiohCard />
+  </div>
+</Layout>
+
+{
+  /*
+
+      <div class="w-full">
+      <div class="grid gap-4 xl:grid-cols-6">
+
+
+        <div class="flex flex-col absolute right-0">
+
+        </div>
       </div>
+    </div>
+
+    <div class="container m-auto py-10 bg-neutral-800/50 flex">
+      <div class="basis-1/4"></div>
       <div class="p-4 text-gray-600 basis-2/3">
         <AboutMe />
       </div>
     </div>
+    
     <div class="flex justify-between py-10">
       <GalleryCard />
       <GalleryCard />
       <GalleryCard />
       <GalleryCard />
     </div>
-  </div>
-</Layout>
+
+*/
+}
