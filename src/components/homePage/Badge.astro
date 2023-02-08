@@ -1,0 +1,22 @@
+---
+export interface Talk {
+  communityName: string;
+  talkLink: string;
+  talkTitle: string;
+  country: string;
+  communityImg: string;
+  year: string;
+}
+export interface Props {
+  talk: Talk;
+}
+
+const { talk } = Astro.props;
+const { communityImg } = talk;
+---
+
+<div
+  class="w-12 h-12 transform duration-500 hover:bg-white text-2xl hover:-translate-y-3 text-white hover:text-blue-600 bg-blue-600 sticky fixed astro-Y6WAX4O7"
+>
+  <img src={communityImg} />
+</div>

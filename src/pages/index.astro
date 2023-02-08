@@ -7,12 +7,15 @@ import GalleryCard from "../components/homePage/GalleryCard.astro";
 import RedesNotificationContainer from "../components/homePage/RedesNotificationContainer.astro";
 import Stats from "../components/homePage/Stats.astro";
 import { generalStats } from "../data/generalStats";
+import { talksData } from "../data/talksData";
+import Badge from "../components/homePage/Badge.astro";
+console.log(talksData);
 ---
 
 <Layout title="Damian Sire">
   <div
     style="background-image: url('https://wallpaperaccess.com/full/295661.jpg');"
-    class="bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center grid grid-cols-11"
+    class="grid grid-cols-11 bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center"
   >
     <div class="col-span-8 gap-4">
       <div class="flex justify-evenly">
@@ -22,20 +25,30 @@ import { generalStats } from "../data/generalStats";
           ))
         }
       </div>
-      <div class="grid grid-cols-4">
-        <div class="flex justify-between py-10 flex-col">
-          <GalleryCard />
-          <GalleryCard />
-        </div>
-        <div class="col-span-2 m-auto py-10 bg-neutral-800/50">
+      <div class="grid grid-cols-10 grid-rows-10 gap-4 p-4">
+        <div class="py-10 bg-neutral-800/40 flex col-span-8 col-start-1 col-end-11">
           <AboutMe />
         </div>
-        <div class="flex justify-between py-10 flex-col">
-          <GalleryCard />
-          <GalleryCard />
+        <div
+          class="bg-red-800 col-span-10 grid grid-rows-2 flex justify-between grid-cols-10 gap-3"
+        >
+          {
+            talksData.map((talk) => (
+              <div class="col-span-1">
+                <Badge talk={talk} />
+              </div>
+            ))
+          }
         </div>
       </div>
+      {
+        /* 
+        <GalleryCard />
+        <GalleryCard />
+        */
+      }
     </div>
+
     <div class="col-span-3 min-w-[450px]">
       <Notification text="Hola! Ya que estas aca, hablemos 🔥" />
       <br />
@@ -45,23 +58,3 @@ import { generalStats } from "../data/generalStats";
     </div>
   </div>
 </Layout>
-
-{
-  /*
-
-      <div class="w-full">
-      <div class="grid gap-4 xl:grid-cols-6">
-
-
-        <div class="flex flex-col absolute right-0">
-
-        </div>
-      </div>
-    </div>
-
-
-    
-
-
-*/
-}
