@@ -1,0 +1,60 @@
+---
+import { Icon } from "astro-icon";
+import Badge from "./Badge.astro";
+
+export interface Talk {
+  communityName: string;
+  talkLink: string;
+  talkTitle: string;
+  country: string;
+  communityImg: string;
+  year: string;
+}
+
+export interface TalkForCountry {
+  [key: string]: Talk[];
+}
+
+export interface Props {
+  countryName: string;
+  talkForCountry: TalkForCountry;
+}
+
+const { countryName, talkForCountry } = Astro.props;
+
+const equivalence: { [key: string]: string } = {
+  Mexico: "openmoji:flag-mexico",
+  Uruguay: "openmoji:flag-uruguay",
+  Latam: "openmoji:bavaria-flag",
+  Bolivia: "openmoji:flag-bolivia",
+  "Republica Dominicana": "openmoji:flag-dominican-republic",
+  Colombia: "openmoji:flag-colombia",
+  Honduras: "openmoji:flag-honduras",
+  Argentina: "openmoji:flag-argentina",
+  Nicaragua: "openmoji:flag-nicaragua",
+  Panama: "openmoji:flag-panama",
+  Peru: "openmoji:flag-peru",
+};
+
+const getIconByCountry = (countryName: string) => {
+  return equivalence[countryName];
+};
+
+const flagIcon = getIconByCountry(countryName);
+---
+
+<div class="grid-rows-2">
+  <div class="row-span-1 flex items-center grid grid-cols-7">
+    <div class="w-12 col-span-1">
+      <Icon name={flagIcon} />
+      {countryName}:
+    </div>
+    {
+      talkForCountry[countryName].map((talk) => (
+        <div class="col-span-1">
+          <Badge talk={talk} />
+        </div>
+      ))
+    }
+  </div>
+</div>

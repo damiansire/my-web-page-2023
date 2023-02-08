@@ -1,18 +1,63 @@
 export const talksData = [
-    {
-        communityName: "DevFest Mexico",
-        talkLink: "https://devfestmexico.com/speakers/",
-        talkTitle: "Inteligencia Artificial con JavaScript",
-        country: "Mexico",
-        communityImg: "/communityImages/DevFestMexico.png",
-        year: "2021",
-    },
+
     {
         communityName: "AngularMVD",
         talkLink: "https://www.meetup.com/es/Angular-MVD/events/fxpjxryccpbwb/",
         talkTitle: "De 0 a 100 en TensorFlowJs con Angular",
         country: "Uruguay",
         communityImg: "/communityImages/AngularMVD.jpg",
+        year: "2021",
+    },
+    {
+        communityName: "Manuel - UndefinedDevs",
+        talkLink: "https://www.youtube.com/watch?v=tiFQRqkZ6aU",
+        talkTitle: "La evolucion de las comunidades tecnologicas",
+        country: "Colombia",
+        communityImg:
+            "https://yt3.ggpht.com/ytc/AAUvwngJW-BHmQ9XpatLhyRwdZQytBVhbVxkgRn_0AKolA=s88-c-k-c0x00ffffff-no-rj",
+        year: "2020",
+    },
+    {
+        communityName: "Python Pereira - Colombia",
+        talkLink: "https://www.meetup.com/es/pythonpereira/events/272743156/",
+        talkTitle: "Inteligencia artificial con Python",
+        country: "Colombia",
+        communityImg: "https://pypereira.co/static/images/2019.svg",
+        year: "2020",
+    },
+    {
+        communityName: "Angular Bogotá",
+        talkLink:
+            "https://www.youtube.com/watch?v=RyiojuRLcAI&ab_channel=AngularBogot%C3%A1",
+        talkTitle: "De 0 a 100 en Inteligencia Artificial con Angular",
+        country: "Colombia",
+        communityImg: "/communityImages/AngularBogota.jpg",
+        year: "2021",
+    },
+    {
+        communityName: "NodeColombia",
+        talkLink: "https://www.meetup.com/es/node_co/events/277160045/",
+        talkTitle: "Interaccion con el usuario mediante IA - Tensorflow.js",
+        country: "Colombia",
+        communityImg:
+            "https://yt3.ggpht.com/ytc/AAUvwngsMHvHHY9e9p59x6zUBssUvvsjmi0eMarud6Hn=s176-c-k-c0x00ffffff-no-rj",
+        year: "2021",
+    },
+    {
+        communityName: "Joacos Twitters Spaces",
+        talkLink: "https://twitter.com/JoaoPixeles",
+        talkTitle: "Estructura de datos y Algoritmos",
+        country: "Colombia",
+        communityImg: "https://i.imgur.com/DBQTBY7_d.webp?maxwidth=760",
+        year: "2021",
+    },
+    {
+        communityName: "Python Cochabamba",
+        talkLink:
+            "https://www.youtube.com/watch?v=FZagdt0Ptmg",
+        talkTitle: "",
+        country: "Bolivia",
+        communityImg: "https://yt3.ggpht.com/ytc/AKedOLSguLnwffZAjmikbaX8YNUbeYrs4DA2si5k9Uo=s88-c-k-c0x00ffffff-no-rj",
         year: "2021",
     },
     {
@@ -33,15 +78,7 @@ export const talksData = [
             "https://yt3.ggpht.com/ytc/AKedOLQzFW43IJKnDXoa36jRewLnq5V6nhZb1efZKdN7=s48-c-k-c0x00ffffff-no-rj",
         year: "2021",
     },
-    {
-        communityName: "Python Cochabamba",
-        talkLink:
-            "https://www.youtube.com/watch?v=FZagdt0Ptmg",
-        talkTitle: "",
-        country: "Bolivia",
-        communityImg: "https://yt3.ggpht.com/ytc/AKedOLSguLnwffZAjmikbaX8YNUbeYrs4DA2si5k9Uo=s88-c-k-c0x00ffffff-no-rj",
-        year: "2021",
-    },
+
     {
         communityName: "Javascript Montevideo",
         talkLink: "https://www.meetup.com/montevideojs/events/281150261/",
@@ -70,15 +107,6 @@ export const talksData = [
         year: "2021",
     },
     {
-        communityName: "Angular Bogotá",
-        talkLink:
-            "https://www.youtube.com/watch?v=RyiojuRLcAI&ab_channel=AngularBogot%C3%A1",
-        talkTitle: "De 0 a 100 en Inteligencia Artificial con Angular",
-        country: "Colombia",
-        communityImg: "/communityImages/AngularBogota.jpg",
-        year: "2021",
-    },
-    {
         communityName: "Angula Honduras",
         talkLink:
             "https://www.youtube.com/watch?v=uVLE8E6PAJs&t=295s&ab_channel=AngularHonduras",
@@ -87,15 +115,7 @@ export const talksData = [
         communityImg: "/communityImages/AngularHonduras.jpg",
         year: "2021",
     },
-    {
-        communityName: "NodeColombia",
-        talkLink: "https://www.meetup.com/es/node_co/events/277160045/",
-        talkTitle: "Interaccion con el usuario mediante IA - Tensorflow.js",
-        country: "Colombia",
-        communityImg:
-            "https://yt3.ggpht.com/ytc/AAUvwngsMHvHHY9e9p59x6zUBssUvvsjmi0eMarud6Hn=s176-c-k-c0x00ffffff-no-rj",
-        year: "2021",
-    },
+
     {
         communityName: "NgRosario",
         talkLink: "https://www.meetup.com/es/Ng-Rosario/events/277094219/",
@@ -177,22 +197,6 @@ export const talksData = [
         year: "2020",
     },
     {
-        communityName: "Python Pereira - Colombia",
-        talkLink: "https://www.meetup.com/es/pythonpereira/events/272743156/",
-        talkTitle: "Inteligencia artificial con Python",
-        country: "Colombia",
-        communityImg: "https://pypereira.co/static/images/2019.svg",
-        year: "2020",
-    },
-    {
-        communityName: "Joacos Twitters Spaces",
-        talkLink: "https://twitter.com/JoaoPixeles",
-        talkTitle: "Estructura de datos y Algoritmos",
-        country: "Colombia",
-        communityImg: "https://i.imgur.com/DBQTBY7_d.webp?maxwidth=760",
-        year: "2021",
-    },
-    {
         communityName: "Nube Colectiva",
         talkLink: "https://www.youtube.com/watch?v=J69MbeM6b8U&t=5s&ab_channel=NubeColectiva",
         talkTitle: "Novedades de Angular 12",
@@ -206,15 +210,6 @@ export const talksData = [
         talkTitle: "Visualización de datos en angular con PrimeNg",
         country: "Uruguay",
         communityImg: "/communityImages/AngularMVD.jpg",
-        year: "2020",
-    },
-    {
-        communityName: "Manuel - UndefinedDevs",
-        talkLink: "https://www.youtube.com/watch?v=tiFQRqkZ6aU",
-        talkTitle: "La evolucion de las comunidades tecnologicas",
-        country: "Colombia",
-        communityImg:
-            "https://yt3.ggpht.com/ytc/AAUvwngJW-BHmQ9XpatLhyRwdZQytBVhbVxkgRn_0AKolA=s88-c-k-c0x00ffffff-no-rj",
         year: "2020",
     },
     {
@@ -251,6 +246,14 @@ export const talksData = [
         communityImg:
             "https://pbs.twimg.com/profile_images/706887943256973312/KScAgsOs_400x400.jpg",
         year: "2020",
+    },
+    {
+        communityName: "DevFest Mexico",
+        talkLink: "https://devfestmexico.com/speakers/",
+        talkTitle: "Inteligencia Artificial con JavaScript",
+        country: "Mexico",
+        communityImg: "/communityImages/DevFestMexico.png",
+        year: "2021",
     },
 ]
 
