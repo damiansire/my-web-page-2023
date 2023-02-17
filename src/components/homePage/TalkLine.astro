@@ -34,6 +34,7 @@ const equivalence: { [key: string]: string } = {
   Nicaragua: "openmoji:flag-nicaragua",
   Panama: "openmoji:flag-panama",
   Peru: "openmoji:flag-peru",
+  Ecuador: "openmoji:flag-ecuador",
 };
 
 const getIconByCountry = (countryName: string) => {
@@ -53,6 +54,7 @@ const flagIcon = getIconByCountry(countryName);
       talkForCountry[countryName].map((talk) => (
         <div class="col-span-1">
           <Badge talk={talk} />
+          {talk.communityName}
         </div>
       ))
     }
