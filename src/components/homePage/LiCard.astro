@@ -1,0 +1,19 @@
+---
+export interface Props {
+  number: string;
+  title: string;
+  text: string;
+}
+
+const { number, title, text } = Astro.props;
+---
+
+<li class="flex justify-center">
+  <div class="px-4 text-5xl font-extralight text-red-700">{number}</div>
+  <div>
+    <div class="text-xl font-bold text-red-800">{title}</div>
+    <p class="max-w-lg py-2 text-sm text-red-900">
+      {text}
+    </p>
+  </div>
+</li>

@@ -1,72 +1,20 @@
 ---
+import { aboutMeData } from "../../data/aboutMeData";
+import LiCard from "./LiCard.astro";
 ---
 
 <ul class="w-full flex flex-col">
-  <li class="flex justify-center 1">
-    <div class="px-4 text-5xl font-extralight text-red-700">01.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">Welcome my life :)</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        My name is Damian Sire and in the following lines I will try to tell you who I am
-        and what I do.
-      </p>
-    </div>
-  </li>
-  <li class="flex justify-center 2">
-    <div class="px-4 text-5xl font-extralight text-red-700">02.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">Way of life</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        I love numbers! I collect data and insights, analyze them then take the time to
-        learn about their, ask me the right questions to understand the things.
-      </p>
-    </div>
-  </li>
-  <li class="flex justify-center 3">
-    <div class="px-4 text-5xl font-extralight text-red-700">03.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">What do I like?</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        My biggest passions are programming, automation and data visualization. I love
-        learning and if what I learn is related to programming, I like it even more.
-      </p>
-    </div>
-  </li>
-  <li class="flex justify-center 4">
-    <div class="px-4 text-5xl font-extralight text-red-700">04.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">The community</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        I have been actively attending meetups for years, either in person or virtually. I
-        had always considered them as an incredible space, where I could be in contact
-        with other developers and learn a lot. But nowadays, they have become a space to
-        share with the community and for me to be able to help it grow.
-      </p>
-    </div>
-  </li>
-  <li class="flex justify-center 5">
-    <div class="px-4 text-5xl font-extralight text-red-700">05.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">Knowledge sharing</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        Throughout my life I have discovered that the best way to learn is to do it with
-        the intention of sharing knowledge with others. Through sharing, true knowledge is
-        reached. This has led me to be very active in the various development communities.
-      </p>
-    </div>
-  </li>
-  <li class="flex justify-center 6">
-    <div class="px-4 text-5xl font-extralight text-red-700">06.</div>
-    <div>
-      <div class="text-xl font-bold text-red-800">What moves me day by day?</div>
-      <p class="max-w-lg py-2 text-sm text-red-900">
-        It's an incredible feeling when people send you messages about how much they have
-        benefited from what you have created, that they support you to keep going, that
-        they like what you do or share. Those little moments are priceless. The fact of
-        sharing what I know, of creating something that others can use, of being able to
-        analyze my environment through data and improve my surroundings, those are the
-        things that move me every day.
-      </p>
-    </div>
-  </li>
+  {
+    aboutMeData.map((data, index) => (
+      <div class="li-card">
+        <LiCard number={data.number} title={data.title} text={data.text} />
+      </div>
+    ))
+  }
 </ul>
+
+<style>
+  ul .li-card:nth-child(n + 2) {
+    margin-top: 1rem;
+  }
+</style>
