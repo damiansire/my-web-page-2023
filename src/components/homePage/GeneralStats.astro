@@ -1,0 +1,12 @@
+---
+import { generalStats } from "../../data/generalStats";
+import Stats from "./Stats.astro";
+---
+
+<div class="flex justify-evenly">
+  {
+    generalStats.map(({ iconName, title, text }) => (
+      <Stats iconName={iconName} title={title} text={text} />
+    ))
+  }
+</div>

@@ -1,15 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import YugiohCard from "../components/homePage/YugiohCard.astro";
-import Notification from "../components/homePage/Notification.astro";
 import AboutMe from "../components/homePage/AboutMe.astro";
-import GalleryCard from "../components/homePage/GalleryCard.astro";
+import Notification from "../components/homePage/Notification.astro";
 import RedesNotificationContainer from "../components/homePage/RedesNotificationContainer.astro";
-import Stats from "../components/homePage/Stats.astro";
-import { generalStats } from "../data/generalStats";
-import { talkForCountry, talksData } from "../data/talksData";
-import Badge from "../components/homePage/Badge.astro";
-import TalkLine from "../components/homePage/TalkLine.astro";
+import YugiohCard from "../components/homePage/YugiohCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+import TalksContainer from "../components/homePage/TalksContainer.astro";
+import GeneralStats from "../components/homePage/GeneralStats.astro";
 ---
 
 <Layout title="Damian Sire">
@@ -18,20 +15,10 @@ import TalkLine from "../components/homePage/TalkLine.astro";
     class="grid grid-cols-11 bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center"
   >
     <div class="col-span-8 gap-4">
-      <div class="flex justify-evenly">
-        {
-          generalStats.map(({ iconName, title, text }) => (
-            <Stats iconName={iconName} title={title} text={text} />
-          ))
-        }
-      </div>
+      <GeneralStats />
       <div class="grid grid-cols-10 gap-4 p-4">
-        <div class="col-span-3 gap-3 grid grid-cols-5 grid-rows-11">
-          {
-            Object.keys(talkForCountry).map((countryName) => (
-              <TalkLine countryName={countryName} talkForCountry={talkForCountry} />
-            ))
-          }
+        <div class="col-span-3">
+          <TalksContainer />
         </div>
         <div class="py-4 flex col-span-7 px-16">
           <AboutMe />
