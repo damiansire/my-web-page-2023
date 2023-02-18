@@ -44,19 +44,14 @@ const getIconByCountry = (countryName: string) => {
 const flagIcon = getIconByCountry(countryName);
 ---
 
-<div class="grid-rows-2">
-  <div class="row-span-1 flex items-center grid grid-cols-7">
-    <div class="w-12 col-span-1">
-      <Icon name={flagIcon} />
-      {countryName}:
-    </div>
-    {
-      talkForCountry[countryName].map((talk) => (
-        <div class="col-span-1">
-          <Badge talk={talk} />
-          {talk.communityName}
-        </div>
-      ))
-    }
-  </div>
+<div class="w-12 col-span-1">
+  <Icon name={flagIcon} />
+  {countryName}:
 </div>
+{
+  talkForCountry[countryName].map((talk) => (
+    <div class="col-span-1">
+      <Badge talk={talk} />
+    </div>
+  ))
+}

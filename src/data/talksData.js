@@ -1,13 +1,5 @@
 export const talksData = [
     {
-        communityName: "AngularQuito",
-        talkLink: "https://www.youtube.com/watch?v=65d-JTwrFco",
-        talkTitle: "Buenas practicas de Unit Test en Angular con Jasmine + Karma",
-        country: "Ecuador",
-        communityImg: "/communityImages/AngularQuito.png",
-        year: "2022",
-    },
-    {
         communityName: "AngularMVD",
         talkLink: "https://www.meetup.com/es/angular-mvd/events/fxpjxryfcdbtb/",
         talkTitle: "The good way: DDD, Nx, Microfrontends and Module Federation",
@@ -269,6 +261,14 @@ export const talksData = [
         country: "Mexico",
         communityImg: "/communityImages/DevFestMexico.png",
         year: "2021",
+    },
+    {
+        communityName: "AngularQuito",
+        talkLink: "https://www.youtube.com/watch?v=65d-JTwrFco",
+        talkTitle: "Buenas practicas de Unit Test en Angular con Jasmine + Karma",
+        country: "Ecuador",
+        communityImg: "/communityImages/AngularQuito.png",
+        year: "2022",
     },
 ]
 
