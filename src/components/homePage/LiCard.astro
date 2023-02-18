@@ -8,10 +8,14 @@ export interface Props {
 const { number, title, text } = Astro.props;
 ---
 
-<li class="flex justify-left border-gray-200 rounded-xl bg-gray-50 p-4">
-  <div class="px-4 text-5xl font-extralight text-red-700">{number}</div>
-  <div class="w-full">
-    <div class="text-xl font-bold text-red-800">{title}</div>
+<li class="flex justify-left border-gray-200 rounded-xl bg-gray-50">
+  <p
+    class="absolute bg-sky-500 w-fit px-4 py-1 text-sm font-bold text-white rounded-tl-lg rounded-br-xl"
+  >
+    {title}
+  </p>
+  <div class="w-full flex items-center p-4 mt-3">
+    <div class="px-4 text-5xl font-extralight text-red-700">{number}</div>
     <p class="py-2 text-sm text-red-900">
       {text}
     </p>
