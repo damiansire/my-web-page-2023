@@ -5,7 +5,7 @@ import LiCard from "./LiCard.astro";
 
 <ul class="w-full flex flex-col">
   {
-    aboutMeData.map((data, index) => (
+    aboutMeData.map((data) => (
       <div class="li-card">
         <LiCard number={data.number} title={data.title} text={data.text} />
       </div>
