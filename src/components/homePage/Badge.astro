@@ -1,18 +1,11 @@
 ---
-export interface Talk {
-  communityName: string;
-  talkLink: string;
-  talkTitle: string;
-  country: string;
-  communityImg: string;
-  year: string;
-}
+import type { Talk } from "../../data/talksData";
+
 export interface Props {
-  talk: Talk;
+  communityImg: string;
 }
 
-const { talk } = Astro.props;
-const { communityImg } = talk;
+const { communityImg } = Astro.props;
 ---
 
 <div

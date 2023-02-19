@@ -1,12 +1,12 @@
 ---
-import { talkForCountry } from "../../data/talksData";
+import { talksData } from "../../data/talksData";
 import TalkLine from "./TalkLine.astro";
+import TalksStats from "./TalksStats.astro";
 ---
 
-<div class="gap-3 grid grid-cols-5 grid-rows-11">
-  {
-    Object.keys(talkForCountry).map((countryName) => (
-      <TalkLine countryName={countryName} talkForCountry={talkForCountry} />
-    ))
-  }
+<div class="">
+  <TalksStats />
+  <div>
+    {talksData.map((talkData) => <TalkLine talkData={talkData} />)}
+  </div>
 </div>

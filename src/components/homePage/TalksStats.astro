@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon";
+import { talkStats } from "../../data/generalStats";
+---
+
+<div class="flex items-start rounded-xl bg-white p-4 shadow-lg">
+  <div class="flex h-12 w-12 items-center justify-center rounded-full">
+    <Icon name={talkStats.iconName} />
+  </div>
+
+  <div class="ml-4">
+    <p class="text-base text-gray-500">{talkStats.title}</p>
+    <h2 class="font-semibold text-center">{talkStats.text}</h2>
+  </div>
+</div>

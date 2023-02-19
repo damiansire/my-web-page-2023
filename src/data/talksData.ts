@@ -1,4 +1,12 @@
-export const talksData = [
+export interface Talk {
+    communityName: string;
+    talkLink: string;
+    talkTitle: string;
+    country: string;
+    communityImg: string;
+    year: string;
+}
+export const talksData: Talk[] = [
     {
         communityName: "AngularMVD",
         talkLink: "https://www.meetup.com/es/angular-mvd/events/fxpjxryfcdbtb/",
