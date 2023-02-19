@@ -4,62 +4,62 @@ import { Icon } from "astro-icon";
 
 <div class="flex items-center justify-center">
   <div class="grid grid-cols-5 gap-4">
-    <!--Facebook Button -->
+    <a href="https://youtube.com/c/damiansiredesarrollo" target="_blank">
+      <button
+        id="youtube"
+        class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white text-red-500 border-red-500 hover:bg-[red]"
+      >
+        <Icon name="logos:youtube-icon" />
+      </button>
+    </a>
 
-    <button
-      id="facebook"
-      class="rounded-full w-12 h-12 transform duration-500 border-2 hover:bg-white text-2xl hover:-translate-y-3 text-white 
-      hover:text-blue-600 border-blue-600 bg-blue-600 sticky fixed"
-    >
-    <Icon name="bi:facebook" />
-  </button>
+    <a href="https://www.linkedin.com/in/damiansire/" target="_blank">
+      <button
+        id="linkedin"
+        class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white text-blue-500 border-blue-500 hover:bg-blue-500"
+      >
+        <Icon name="jam:linkedin" />
+      </button>
+    </a>
 
-    <!--İnstagram Button -->
+    <a href="https://github.com/damiansire" target="_blank">
+      <button
+        id="github"
+        class="rounded-full w-12 h-12 transform duration-500 border-2 hover:bg-white text-2xl hover:-translate-y-3 text-white hover:text-blue-600 border-blue-600 bg-blue-600 sticky fixed"
+      >
+        <Icon name="bi:github" />
+      </button>
+    </a>
 
-    <button
-      id="instagram"
-      class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white 
-      text-pink-600 hover:via-pink-600 border-pink-500 hover:border-0 hover:from-indigo-600 hover:to-yellow-500  bg-gradient-to-b min-w-wull"
-    >
-      <Icon name="logos:instagram-icon" />
-    </button>
+    <a href="https://twitter.com/damiansire" target="_blank">
+      <button
+        id="twitter"
+        class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 text-black-400 hover:text-white border-black-400 hover:border-blue-400 hover:bg-blue-400"
+      >
+        <Icon name="ph:twitter-logo" />
+      </button>
+    </a>
 
-    <!--Twitter Button -->
-    <button
-      id="twitter"
-      class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 
-      text-black-400 hover:text-white border-black-400 hover:border-blue-400 hover:bg-blue-400 "
-    >
-            <Icon name="ph:twitter-logo" />
-    </button>
-
-    <!--YouTube Button -->
-    <button
-      id="youtube"
-      class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white 
-      text-red-500 border-red-500 hover:bg-[red]"
-    >
-      <Icon name="logos:youtube-icon" />
-    </button>
-
-    <!--Linkedin Button-->
-    <button
-      id="linkedin"
-      class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white 
-      text-blue-500 border-blue-500 hover:bg-blue-500"
-    >
-      <Icon name="jam:linkedin" />
-    </button>
+    <a href="https://www.instagram.com/damiansire/" target="_blank">
+      <button
+        id="instagram"
+        class="rounded-full w-12 h-12 transform duration-500 border-2 bg-white text-2xl hover:-translate-y-3 hover:text-white text-pink-600 hover:via-pink-600 border-pink-500 hover:border-0 hover:from-indigo-600 hover:to-yellow-500 bg-gradient-to-b min-w-wull"
+      >
+        <Icon name="logos:instagram-icon" />
+      </button>
+    </a>
   </div>
 </div>
 
 <style>
-  #linkedin, #youtube{
+  #linkedin,
+  #youtube {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-      [astro-icon="jam:linkedin"], [astro-icon="logos:youtube-icon"] {
-        width: 2rem;
-    }
+  [astro-icon="jam:linkedin"],
+  [astro-icon="logos:youtube-icon"] {
+    width: 2rem;
+  }
 </style>
