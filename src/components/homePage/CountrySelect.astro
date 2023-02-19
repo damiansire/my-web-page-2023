@@ -34,17 +34,20 @@ const selectedCountry = "Display All";
     return getLiInSameLineOfClick(event);
   };
 
-  const updateSelectedText = (newText: string) => {
-    selectedCountry = newText;
-    const selectedCountrySpan = document.querySelector("#selected-country");
-    (selectedCountrySpan as any).innerText = selectedCountry;
+  const updateSelectedOption = (countryOption: Element, countryName: string) => {
+    //cloneNode()
+    selectedCountry = countryName;
+    const countryOptionClone = countryOption.cloneNode(true);
+    countryOptionClone.id = "country-selected";
+    const countrySelectedRef = document.querySelector("#country-selected");
+    (countrySelectedRef as any).replaceWith(countryOptionClone);
   };
 
   countrySelector?.addEventListener("click", (event) => {
     const countryElement = getClickedLi(event);
     if (countryElement) {
       const country = countryElement.dataset.country;
-      updateSelectedText(country);
+      updateSelectedOption(countryElement, country);
       onlyShowCountry(country);
     }
   });
@@ -61,7 +64,7 @@ const selectedCountry = "Display All";
 </script>
 
 <div class="flex w-full justify-center relative p-2">
-  <div class="flex cursor-pointer clicker">
+  <div class="flex cursor-pointer clicker" id="country-selected">
     <Icon name="fontisto:world-o" class="w-8" />
     <span class="place-self-center ml-2" id="selected-country">{selectedCountry}</span>
   </div>
