@@ -280,14 +280,6 @@ export const talksData: Talk[] = [
     },
 ]
 
-export const talkForCountry = talksData.reduce((acc, curr) => {
-    if (acc[curr.country]) {
-        acc[curr.country].push(curr)
-    }
-    else {
-        acc[curr.country] = [curr]
-    }
-    return acc;
-}, {})
+export const countriesNames = [...new Set(talksData.map(talk => talk.country))];
 
 export const lenght = talksData.length
