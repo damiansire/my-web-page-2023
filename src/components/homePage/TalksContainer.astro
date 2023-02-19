@@ -6,10 +6,10 @@ import TalksStats from "./TalksStats.astro";
 
 <div>
   <TalksStats />
-  <div>
+  <div class="talk-container">
     {
       talksData.map((talkData) => (
-        <div class="p-1">
+        <div class="p-1" data-country={talkData.country}>
           <TalkLine talkData={talkData} />
         </div>
       ))
