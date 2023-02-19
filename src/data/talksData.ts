@@ -69,10 +69,10 @@ export const talksData: Talk[] = [
     {
         communityName: "Python Cochabamba",
         talkLink:
-            "https://www.youtube.com/watch?v=FZagdt0Ptmg",
-        talkTitle: "",
+            "https://www.youtube.com/watch?v=XNntmUiAHx0",
+        talkTitle: "Practicas de seguridad en Python",
         country: "Bolivia",
-        communityImg: "https://yt3.ggpht.com/ytc/AKedOLSguLnwffZAjmikbaX8YNUbeYrs4DA2si5k9Uo=s88-c-k-c0x00ffffff-no-rj",
+        communityImg: "https://yt3.ggpht.com/ytc/AL5GRJXBreU86SD53sQu2-Xu5f4YftPcC6-37FhCOF9U=s48-c-k-c0x00ffffff-no-rj",
         year: "2021",
     },
     {

@@ -4,9 +4,15 @@ import TalkLine from "./TalkLine.astro";
 import TalksStats from "./TalksStats.astro";
 ---
 
-<div class="">
+<div>
   <TalksStats />
   <div>
-    {talksData.map((talkData) => <TalkLine talkData={talkData} />)}
+    {
+      talksData.map((talkData) => (
+        <div class="p-1">
+          <TalkLine talkData={talkData} />
+        </div>
+      ))
+    }
   </div>
 </div>

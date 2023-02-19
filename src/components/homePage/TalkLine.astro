@@ -13,6 +13,15 @@ const { talkData } = Astro.props;
 const flagIcon = getIconByCountry(talkData.country);
 ---
 
-<Icon name={flagIcon} />
-
-<Badge communityImg={talkData.communityImg} />
+<div class="flex border-gray-200 rounded-xl bg-gray-50/95 p-2">
+  <div class="place-self-center">
+    <Badge communityImg={talkData.communityImg} />
+  </div>
+  <div class="grow px-3">
+    <div>{talkData.communityName} - {talkData.year}</div>
+    <div class="text-sm">{talkData.talkTitle}</div>
+  </div>
+  <div class="place-self-center">
+    <Icon name={flagIcon} class="w-12 h-12" />
+  </div>
+</div>
