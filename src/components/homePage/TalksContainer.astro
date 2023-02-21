@@ -4,9 +4,9 @@ import TalkLine from "./TalkLine.astro";
 import TalksStats from "./TalksStats.astro";
 ---
 
-<div>
+<div class="h-full">
   <TalksStats />
-  <div class="talk-container">
+  <div class="talk-container overflow-scroll h-full">
     {
       talksData.map((talkData) => (
         <div class="p-1" data-country={talkData.country}>
