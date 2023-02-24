@@ -6,7 +6,7 @@ import TalksStats from "./TalksStats.astro";
 
 <div class="h-full flex flex-col">
   <TalksStats />
-  <div class="talk-container overflow-y-scroll h-full">
+  <div class="talk-container overflow-auto h-full">
     {
       talksData.map((talkData) => (
         <div class="p-1" data-country={talkData.country}>
