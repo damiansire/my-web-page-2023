@@ -12,21 +12,23 @@ import GeneralStats from "../components/homePage/GeneralStats.astro";
 <Layout title="Damian Sire">
   <div
     style="background-image: url('https://wallpaperaccess.com/full/295661.jpg');"
-    class="grid grid-cols-11 bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center overflow-hidden"
+    class="flex flex-col-reverse sm:grid sm:grid-cols-11 bg-gradient-to-t h-screen p-6 bg-no-repeat bg-center overflow-scroll sm:overflow-hidden bg-repeat-y"
   >
-    <div class="col-span-8 gap-4 grid grid-cols-12 gap-4 pb-4 px-4 overflow-hidden">
-      <div class="col-span-4 overflow-hidden">
+    <div
+      class="flex flex-col-reverse sm:col-span-8 sm:grid sm:grid-cols-12 gap-4 pb-4 px-4 sm:overflow-hidden"
+    >
+      <div class="sm:col-span-4 sm:overflow-hidden">
         <TalksContainer />
       </div>
-      <div class="flex flex-col col-span-8 px-16">
-        <div class="pb-4">
+      <div class="flex flex-col col-span-8 px-0 md:px-16">
+        <div class="py-4 md:pt-0">
           <GeneralStats />
         </div>
         <AboutMe />
       </div>
     </div>
 
-    <div class="col-span-3 min-w-[450px]">
+    <div class="sm:col-span-3 sm:min-w-[450px]">
       <Notification text="Hello! While you're here, let's talk 🔥" />
       <br />
       <RedesNotificationContainer />

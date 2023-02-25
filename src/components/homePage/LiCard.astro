@@ -14,7 +14,7 @@ const { number, title, text } = Astro.props;
   >
     {title}
   </p>
-  <div class="w-full flex items-center p-4 mt-3">
+  <div class="w-full flex flex-col md:flex-row items-center p-4 mt-3">
     <div class="px-4 text-5xl font-extralight text-red-700">{number}</div>
     <p class="py-2 text-sm text-red-900">
       {text}

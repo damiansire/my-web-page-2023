@@ -3,7 +3,7 @@ import { generalStats } from "../../data/generalStats";
 import Stats from "./Stats.astro";
 ---
 
-<div class="flex justify-evenly">
+<div class="flex flex-col md:flex-row justify-evenly gap-2 sm:gap-0">
   {
     generalStats.map(({ iconName, title, text }) => (
       <Stats iconName={iconName} title={title} text={text} />
