@@ -278,6 +278,14 @@ export const talksData: Talk[] = [
         communityImg: "/communityImages/AngularQuito.png",
         year: "2022",
     },
+    {
+        communityName: "BeerJs Cordoba",
+        talkLink: "https://www.youtube.com/watch?v=65d-JTwrFco",
+        talkTitle: "How Javascript Numbers Works",
+        country: "Argentina",
+        communityImg: "https://yt3.ggpht.com/ytc/AGIKgqM85iKioPmRmYVfpfBBsgewLpiHO8azNWD09FP4=s48-c-k-c0x00ffffff-no-rj",
+        year: "2023",
+    },
 ]
 
 export const countriesNames = [...new Set(talksData.map(talk => talk.country))];
