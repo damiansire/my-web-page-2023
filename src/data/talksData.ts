@@ -290,7 +290,7 @@ export const talksData: Talk[] = [
         communityName: "Angular Costa Rica",
         talkLink: "",
         talkTitle: "Introduccion a DDD",
-        country: "CostaRica",
+        country: "Costa Rica",
         communityImg: "https://yt3.googleusercontent.com/ytc/APkrFKZVByWOfQb-W-E7fQLK8oivAcUJ_C4KEMMT8Bjr=s176-c-k-c0x00ffffff-no-rj",
         year: "2023",
     },

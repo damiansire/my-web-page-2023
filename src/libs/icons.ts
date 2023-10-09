@@ -12,7 +12,7 @@ const equivalence: { [key: string]: string } = {
     Peru: "openmoji:flag-peru",
     Ecuador: "openmoji:flag-ecuador",
     Brasil: "openmoji:flag-brazil",
-    CostaRica: "openmoji:flag-costa-rica"
+    "Costa Rica": "openmoji:flag-costa-rica"
 };
 
 export const getIconByCountry = (countryName: string) => {
