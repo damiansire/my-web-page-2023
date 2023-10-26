@@ -267,7 +267,7 @@ export const talksData: Talk[] = [
         talkLink: "https://devfestmexico.com/speakers/",
         talkTitle: "Inteligencia Artificial con JavaScript",
         country: "Mexico",
-        communityImg: "/communityImages/DevFestMexico.png",
+        communityImg: "/communityImages/DevFestMexico.webp",
         year: "2021",
     },
     {
@@ -307,7 +307,7 @@ export const talksData: Talk[] = [
         talkLink: "",
         talkTitle: "How to greatly improve your React app performance",
         country: "Uruguay",
-        communityImg: "https://www.bairesdev.com/wp-content/uploads/2022/06/Picture6-1.svg",
+        communityImg: "communityImages/ReactMvd.jpeg",
         year: "2023",
     },
     {
