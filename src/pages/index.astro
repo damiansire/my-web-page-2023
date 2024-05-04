@@ -5,21 +5,15 @@ import TimeLine from "../components/homePage/TimeLine.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Damian Sire">
+<Layout title="Damian Sire" styles="overflow-hidden">
   <div class="flex gap-3 p-4">
     <div class="flex-grow text-center">
       <TimeLine />
-      <div class="flex justify-center">
-        <img src="damiansire.png" class="rounded-full h-80" alt="" />
-      </div>
     </div>
     <div class="flex flex-col gap-3">
       <NotificationDisplay text="Hello! While you're here, let's talk 🔥" />
       <RedesNotificationContainer />
-      <div>
-        <div>Invitame a un evento</div>
-        <div>Invitame a trabajar contigo</div>
-      </div>
+      <div></div>
     </div>
   </div>
 </Layout>
