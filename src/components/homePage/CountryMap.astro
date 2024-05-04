@@ -1,0 +1,19 @@
+---
+import { talksData } from "../../data/talksData";
+import { Icon } from "astro-icon";
+import { countriesNames } from "../../data/talksData";
+import { getIconByCountry } from "../../libs/icons";
+---
+
+<h1 class="text-2xl font-extrabold text-center">
+  {talksData.length} Talks in more of {countriesNames.length} countries
+</h1>
+<ol class="grid grid-cols-5 gap-4">
+  {
+    countriesNames.map((country) => (
+      <ul class="hover:bg-gray-50 flex justify-center" data-country={country}>
+        <Icon name={getIconByCountry(country)} class="w-12" />
+      </ul>
+    ))
+  }
+</ol>
