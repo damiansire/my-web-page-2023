@@ -1,5 +1,7 @@
 ---
-import { talksData } from "../../../data/talksData";
+import Icon from "astro-icon";
+import { talksImgAndCountries } from "../../../data/talksData";
+import { getIconByCountry } from "../../../libs/icons";
 import Badge from "../Badge.astro";
 ---
 
@@ -23,14 +25,14 @@ import Badge from "../Badge.astro";
 
 <ul class="flex" id="communitiesIconsContainer">
   {
-    [...talksData].map((talkData) => (
+    [...talksImgAndCountries].map((talkData) => (
       <li class="p-1 " data-country={talkData.country}>
         <div class="flex border-gray-200 rounded-xl bg-gray-50/95 p-2">
-          <div class="place-self-center">
+          <div class="place-self-center relative">
             <Badge communityImg={talkData.communityImg} />
-          </div>
-          <div class="grow px-3 content-center hidden">
-            <div>{talkData.communityName}</div>
+            <div class="absolute">
+              <Icon name={getIconByCountry(talkData.country)} class="w-5" />
+            </div>
           </div>
         </div>
       </li>
