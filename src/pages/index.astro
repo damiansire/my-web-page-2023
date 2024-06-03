@@ -1,19 +1,35 @@
 ---
-import NotificationDisplay from "../components/homePage/NotificationDisplay.astro";
+import CommunityCarrousel from "../components/homePage/CommunityCarrousel/CommunityCarrousel.astro";
 import RedesNotificationContainer from "../components/homePage/RedesNotificationContainer.astro";
 import TimeLine from "../components/homePage/TimeLine.astro";
+import TimeLineItem from "../components/homePage/TimeLineItem.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Damian Sire" styles="overflow-hidden">
-  <div class="flex gap-3 p-4">
-    <div class="flex-grow text-center">
-      <TimeLine />
-    </div>
-    <div class="flex flex-col gap-3">
-      <NotificationDisplay text="Hello! While you're here, let's talk 🔥" />
-      <RedesNotificationContainer />
-      <div></div>
+  <div>
+    <CommunityCarrousel />
+    <div class="flex flex-col md:flex-row gap-3 p-4">
+      <div class="md:w-7/12 md:flex-grow text-center">
+        <TimeLineItem
+          description="Chosen as a Developer Expert by Google"
+          imgSrc="badgeExpert.svg"
+        />
+      </div>
+      <div class="md:w-5/12 flex flex-col gap-3">
+        <!-- <NotificationDisplay text="Hello! While you're here, let's talk 🔥" /> -->
+        <RedesNotificationContainer />
+        <TimeLineItem
+          description="Speaker at events in multiple countries"
+          imgSrc="icons/world.png"
+          iconSrc="svg/book.svg"
+        />
+        <TimeLineItem
+          description="Over 30,000 subscribers on YouTube and 2 million views"
+          imgSrc="icons/youtube.png"
+          iconSrc="svg/star.svg"
+        />
+      </div>
     </div>
   </div>
 </Layout>

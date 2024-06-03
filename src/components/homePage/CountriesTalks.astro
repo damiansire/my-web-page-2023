@@ -1,0 +1,89 @@
+---
+import Icon from "astro-icon";
+import { countriesNames, talksData } from "../../data/talksData";
+import { getIconByCountry } from "../../libs/icons";
+import CommunityTalk from "./CommunityTalk.astro";
+---
+
+<script>
+  let selectedCountry = null;
+  const countrySelector = document.querySelector("#country-selector");
+  const countrySelectorContainerRef = document.getElementById(
+    "country-selector-container"
+  ) as any;
+
+  const getClickedLi = (event: Event) => {
+    if (event.target instanceof Element && event.target.closest("li")) {
+      return event.target?.closest("li");
+    }
+  };
+
+  const updateSelectedOption = (
+    countryOption: Element,
+    countryName: string
+  ) => {
+    selectedCountry = countryName;
+    const countryOptionClone = countryOption.cloneNode(true);
+    (countryOptionClone as any).id = "country-selected";
+    const countrySelectedRef = document.querySelector("#country-selected");
+    (countrySelectedRef as any).replaceWith(countryOptionClone);
+  };
+
+  countrySelector?.addEventListener("click", (event) => {
+    const countryElement = getClickedLi(event);
+    if (countryElement) {
+      const country = countryElement.dataset.country;
+      updateSelectedOption(countryElement, country);
+      onlyShowCountry(country);
+      countrySelectorContainerRef.style.display = "none";
+    }
+  });
+
+  const onlyShowCountry = (countryName: string) => {
+    const talkItems = document.querySelectorAll(`.talk-container li`);
+    talkItems.forEach((item) => {
+      const itemCountry = item.getAttribute("data-country");
+      (item as HTMLElement).style.display =
+        itemCountry === countryName || countryName === "All" ? "block" : "none";
+    });
+  };
+</script>
+
+<div class="flex items-start rounded-xl bg-white shadow-lg">
+  <ul
+    class="flex flex-wrap flex-col px-2 cursor-pointer py-2"
+    id="country-selector"
+  >
+    {
+      countriesNames
+        .slice(0, Math.floor(countriesNames.length / 2))
+        .map((country) => (
+          <li class="flex justify-left hover:bg-gray-50" data-country={country}>
+            <Icon name={getIconByCountry(country)} class="w-12" />
+          </li>
+        ))
+    }
+  </ul>
+
+  <ul class="talk-container overflow-auto h-full grid grid-cols-2">
+    {
+      talksData.map((talkData) => (
+        <li class="p-1" data-country={talkData.country}>
+          <CommunityTalk talkData={talkData} />
+        </li>
+      ))
+    }
+  </ul>
+
+  <ul class="px-2 cursor-pointer py-2" id="country-selector">
+    {
+      countriesNames
+        .slice(Math.floor(countriesNames.length / 2), countriesNames.length)
+        .map((country) => (
+          <li class="flex justify-left hover:bg-gray-50" data-country={country}>
+            <Icon name={getIconByCountry(country)} class="w-12" />
+          </li>
+        ))
+    }
+  </ul>
+</div>

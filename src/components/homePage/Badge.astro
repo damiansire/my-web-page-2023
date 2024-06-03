@@ -1,6 +1,4 @@
 ---
-import type { Talk } from "../../data/talksData";
-
 export interface Props {
   communityImg: string;
 }
@@ -9,7 +7,7 @@ const { communityImg } = Astro.props;
 ---
 
 <div
-  class="w-12 h-12 transform duration-500 hover:bg-blue text-2xl hover:-translate-y-3 astro-Y6WAX4O7"
+  class="w-12 h-12 transform duration-500 hover:bg-blue text-2xl hover:-translate-y-3 content-center"
 >
-  <img src={communityImg} />
+  <img class="h-full" src={communityImg} />
 </div>
